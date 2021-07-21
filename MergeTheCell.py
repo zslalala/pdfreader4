@@ -20,6 +20,7 @@ def MergeFuc(table,begin_index,end_index):
 
 #合并入口逻辑函数
 def Merge(table):
+    print(table)
     Ret = []
     begin_index = 0
     end_index = len(table) - 1
@@ -27,7 +28,7 @@ def Merge(table):
     length = len(table)
     switch = True
     for i,cells in enumerate(table):
-        if (switch is True) and ((cells[0] is None) or (cells[1] is None) or (cells[2] is None)):
+        if (switch is True) and ((cells[0] is None)):
             begin_index = i - 1
             switch = False
         if (switch is False) and ((cells[0] is not None) and (cells[1] is not None) and (cells[2] is not None)):
